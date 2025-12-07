@@ -1,0 +1,5 @@
+{
+  "name": "NetRunner: Terminal Breach",
+  "description": "An immersive hacker terminal simulator. Breach the mainframe by solving decryption puzzles, navigating file systems, and cracking passwords using command-line skills.",
+  "requestFramePermissions": []
+}

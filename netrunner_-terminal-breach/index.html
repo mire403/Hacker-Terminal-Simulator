@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NetRunner: Terminal Breach</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
+      
+      body {
+        background-color: #000;
+        overflow: hidden;
+        font-family: 'Fira Code', monospace;
+      }
+      
+      /* Terminal Text Glow - Refined for sharpness */
+      .terminal-text {
+        text-shadow: 0 0 2px rgba(0, 255, 0, 0.7), 0 0 5px rgba(0, 255, 0, 0.4);
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #051a05;
+        border-left: 1px solid #0f0;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #0f0; 
+        border: 1px solid #000;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #4f4; 
+      }
+
+      /* Subtler CRT Flicker Animation for Text/Screen */
+      @keyframes text-flicker {
+        0% { opacity: 0.98; }
+        5% { opacity: 0.95; }
+        10% { opacity: 0.98; }
+        15% { opacity: 1; }
+        20% { opacity: 0.96; }
+        50% { opacity: 1; }
+        55% { opacity: 0.97; }
+        60% { opacity: 0.99; }
+        75% { opacity: 0.96; }
+        100% { opacity: 1; }
+      }
+
+      .animate-text-flicker {
+        animation: text-flicker 0.2s infinite;
+      }
+
+      /* Scanline Animation */
+      @keyframes scan {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(100vh); }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "uuid": "https://aistudiocdn.com/uuid@^13.0.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
